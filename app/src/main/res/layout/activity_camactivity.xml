@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="5"
+    android:orientation="vertical"
+    android:background="#fff"
+    tools:context=".camactivity">
+
+
+    <ImageView
+
+        android:id="@+id/imageView2"
+        android:layout_width="250dp"
+        android:layout_height="320dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/cam"
+        android:onClick="OpenApp"
+        android:src="@drawable/cam" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Take Pictures"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/imageView9"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:textColor="@android:color/holo_red_light"
+        android:backgroundTint="#ffc0cb"
+        android:enabled="false"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/btn_bg"
+        android:onClick="Gallery"
+        android:text="GALLERY"/>
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:backgroundTint="#ffc0cb"
+        android:enabled="false"
+        android:textColor="@android:color/holo_red_light"
+        android:background="@drawable/btn_bg"
+        android:onClick="uploadImage"
+        android:text="Upload" />
+
+    <Button
+        android:id="@+id/cnext"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:textColor="@android:color/holo_red_light"
+        android:layout_gravity="right"
+        android:visibility="invisible"
+        android:backgroundTint="#ffc0cb"
+        android:background="@drawable/btn_bg"
+        android:onClick="cnext"
+        android:text="next"/>
+</LinearLayout>

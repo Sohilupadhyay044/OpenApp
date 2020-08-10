@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".complaint_activity">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="COMPLAINT REGISTER"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:textColor="@android:color/holo_red_light"
+        android:layout_gravity="center"
+        android:gravity="center"/>
+
+
+
+    <EditText
+        android:id="@+id/etname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:inputType="text"
+        android:textSize="25dp"
+        android:text="Enter Name:"
+        android:textColorHint="@android:color/black"
+        android:textStyle="bold" />
+
+
+
+
+    <EditText
+        android:id="@+id/etemail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter Emailid:"
+        android:textSize="25dp"
+        android:textColorHint="@android:color/black"
+        android:layout_marginTop="135dp"
+        android:textStyle="bold" />
+
+
+
+        <EditText
+            android:id="@+id/etadhar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="194dp"
+            android:text="Enter Adhar card No:"
+            android:inputType="number"
+            android:textColorHint="@android:color/black"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+
+
+        <EditText
+            android:id="@+id/etPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="257dp"
+            android:inputType="number"
+            android:text="Enter Phone No:"
+            android:textColorHint="@android:color/black"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+
+
+
+        <EditText
+            android:id="@+id/etissue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="310dp"
+            android:text="Mention Issue:"
+            android:textColorHint="@android:color/black"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+
+    <Button
+        android:id="@+id/btfinish"
+        android:layout_width="220dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:onClick="btfinish"
+        android:enabled="false"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="480dp"
+        android:background="@drawable/btn_bg"
+        android:backgroundTint="#ffc0cb"
+        android:gravity="center"
+        android:text="Register Complaint"
+        android:textColor="@android:color/holo_red_light" />
+
+    <Button
+        android:id="@+id/Khatam"
+        android:layout_width="220dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="590dp"
+        android:background="@drawable/btn_bg"
+        android:backgroundTint="#ffc0cb"
+        android:gravity="center"
+        android:enabled="false"
+        android:text="Finish"
+        android:onClick="Khatam"
+        android:textColor="@android:color/holo_red_light"/>
+
+
+
+</RelativeLayout>
