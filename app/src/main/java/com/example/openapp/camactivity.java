@@ -45,7 +45,6 @@ public class camactivity extends AppCompatActivity {
         mStorageRef = FirebaseStorage.getInstance().getReference();
         Picasso.get().load(url).into(imageView);
 
-
     }
 
 

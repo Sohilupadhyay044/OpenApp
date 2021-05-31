@@ -30,7 +30,6 @@ public class VideoActivity extends AppCompatActivity {
     public void Skip( View view ) {
 
         Intent intent = new Intent(getApplicationContext(), Main2Activity.class);
-
         startActivity(intent);
         finish();
     }
