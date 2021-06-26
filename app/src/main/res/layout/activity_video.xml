@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
     android:orientation="vertical"
-    android:weightSum="5"
+
     tools:context=".VideoActivity">
 
 
@@ -14,51 +14,44 @@
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginLeft="10dp"
-            android:layout_marginEnd="37dp"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:layout_marginBottom="12dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
             android:text="Watch Animation Video"
+            android:padding="10dp"
+            android:textAlignment="center"
             android:textColor="#ff7007"
             android:textSize="30dp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/video_view"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
+            android:textStyle="bold" />
 
         <VideoView
             android:id="@+id/video_view"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginBottom="17dp"
-            app:layout_constraintBottom_toTopOf="@+id/Skip"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView3">
+            android:layout_below="@id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_above="@id/Skip">
 
 
         </VideoView>
 
         <Button
             android:id="@+id/Skip"
-            android:layout_width="121dp"
-            android:layout_height="55dp"
-            android:layout_gravity="right"
-            android:layout_marginBottom="27dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="15dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
             android:backgroundTint="#ff7007"
             android:gravity="center"
+            android:textSize="20sp"
+            android:paddingRight="40dp"
+            android:paddingLeft="40dp"
+            android:textStyle="bold"
             android:onClick="Skip"
             android:text="Skip"
             android:textAllCaps="false"
             android:textColor="#FFFFFf"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/video_view"
             tools:ignore="MissingConstraints" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
