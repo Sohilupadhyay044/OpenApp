@@ -16,18 +16,15 @@ public class InstallActivity extends AppCompatActivity {
     }
 
     public void GoAhead( View view ) {
-        Intent intent = new Intent(getApplicationContext(), camactivity.class);
-        startActivity(intent);
-        finish();
+//        Intent intent = new Intent(getApplicationContext(), camactivity.class);
+//        startActivity(intent);
     }
 
     public void link( View view ) {
 
-       Intent intent = new Intent(android.content.Intent.ACTION_VIEW);
-
-        //Copy App URL from Google Play Store.
-        intent.setData(Uri.parse("https://play.google.com/store/apps/details?id=com.peace.ArMeasure"));
-
-        startActivity(intent);
+//       Intent intent = new Intent(android.content.Intent.ACTION_VIEW);
+//        //Copy App URL from Google Play Store.
+//        intent.setData(Uri.parse("https://play.google.com/store/apps/details?id=com.peace.ArMeasure"));
+//        startActivity(intent
     }
 }

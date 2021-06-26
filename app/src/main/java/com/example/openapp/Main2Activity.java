@@ -15,7 +15,7 @@ public class Main2Activity extends AppCompatActivity {
     }
 
     public void Lets( View view ) {
-        Intent intent = new Intent(getApplicationContext(),InstallActivity.class);
+        Intent intent = new Intent(getApplicationContext(),GpsActivity.class);
         startActivity(intent);
         finish();
     }

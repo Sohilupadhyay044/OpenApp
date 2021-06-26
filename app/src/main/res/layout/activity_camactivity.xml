@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:weightSum="5"
+    android:id="@+id/flContainer"
     android:orientation="vertical"
     android:background="#fff"
     tools:context=".camactivity">
@@ -14,11 +15,11 @@
 
         android:id="@+id/imageView2"
         android:layout_width="250dp"
+        android:onClick="OpenApp"
         android:layout_height="320dp"
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
         android:background="@drawable/cam"
-        android:onClick="OpenApp"
         android:src="@drawable/cam" />
 
     <TextView
@@ -38,7 +39,7 @@
         android:textColor="@android:color/holo_red_light"
         android:backgroundTint="#ffc0cb"
         android:enabled="false"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="395dp"
         android:background="@drawable/btn_bg"
         android:onClick="Gallery"
         android:text="GALLERY"/>
@@ -49,6 +50,7 @@
         android:layout_height="50dp"
         android:layout_gravity="center"
         android:backgroundTint="#ffc0cb"
+        android:layout_marginTop="450dp"
         android:enabled="false"
         android:textColor="@android:color/holo_red_light"
         android:background="@drawable/btn_bg"
@@ -66,4 +68,56 @@
         android:background="@drawable/btn_bg"
         android:onClick="cnext"
         android:text="next"/>
-</LinearLayout>
+
+    <RelativeLayout
+       android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="10dp"
+            android:paddingTop="4dp"
+            android:paddingStart="50dp"
+            android:textStyle="bold"
+            android:textColor="#9400D3"
+            android:textSize="18sp"
+            />
+
+        <ImageView
+            android:layout_marginLeft="30dp"
+            android:layout_width="50dp"
+            android:onClick="MapIcon"
+            android:src="@drawable/location"
+            android:layout_height="40dp"
+            android:layout_marginTop="25dp"/>
+
+        <ImageView
+            android:layout_marginLeft="110dp"
+            android:layout_width="50dp"
+
+            android:layout_height="40dp"
+            android:src="@drawable/cam"
+            android:layout_marginTop="25dp"/>
+
+        <ImageView
+            android:layout_marginLeft="200dp"
+            android:layout_width="50dp"
+           android:onClick="CommunityActivity"
+            android:src="@drawable/community"
+            android:layout_height="40dp"
+            android:layout_marginTop="25dp"/>
+
+
+        <ImageView
+            android:layout_marginLeft="300dp"
+            android:layout_width="50dp"
+            android:onClick="SettingIcon"
+            android:src="@drawable/settings"
+            android:layout_height="40dp"
+            android:layout_marginTop="25dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
