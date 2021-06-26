@@ -14,6 +14,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -34,14 +35,16 @@ public class camactivity extends AppCompatActivity {
     Uri uri;
     private Object view;
 
+
+
     @Override
     protected void onCreate( Bundle savedInstanceState ) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_camactivity);
-        imageView = (ImageView) findViewById(R.id.imageView2);
+       imageView = (ImageView) findViewById(R.id.imageView2);
         button2 = (Button) findViewById(R.id.button3);
         button = (Button) findViewById(R.id.imageView9);
-        cnext = (Button) findViewById(R.id.cnext);
+      cnext = (Button) findViewById(R.id.cnext);
         mStorageRef = FirebaseStorage.getInstance().getReference();
         Picasso.get().load(url).into(imageView);
 
@@ -127,6 +130,23 @@ public class camactivity extends AppCompatActivity {
         Intent intent = new Intent(camactivity.this,GpsActivity.class);
         startActivity(intent);
         finish();
+    }
+
+    public void MapIcon(View view) {
+        Intent intent = new Intent(camactivity.this,GpsActivity.class);
+        startActivity(intent);
+    }
+
+
+    public void CommunityActivity(View view) {
+        Intent intent = new Intent(camactivity.this,CommunityActivity.class);
+        startActivity(intent);
+
+    }
+
+    public void SettingIcon(View view) {
+        Intent intent = new Intent(camactivity.this,SettingActivity.class);
+        startActivity(intent);
     }
 }
 
