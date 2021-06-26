@@ -9,67 +9,94 @@
 
 
     <TextView
+        android:id="@+id/register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="COMPLAINT REGISTER"
-        android:layout_marginTop="20dp"
+        android:text="Register Complaint"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
         android:textStyle="bold"
+        android:background="@color/black"
         android:textSize="30dp"
-        android:textColor="@android:color/holo_red_light"
+        android:textColor="#ff7007"
         android:layout_gravity="center"
         android:gravity="center"/>
 
 
 
-    <EditText
-        android:id="@+id/etname"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
-        android:inputType="text"
-        android:textSize="25dp"
-        android:text="Enter Name:"
-        android:textColorHint="@android:color/black"
-        android:textStyle="bold" />
+<!--    <EditText-->
+<!--        android:id="@+id/etname"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/register"-->
+<!--        android:layout_marginTop="40dp"-->
+<!--        android:inputType="text"-->
+<!--        android:layout_marginLeft="20dp"-->
+<!--        android:layout_marginRight="20dp"-->
+<!--        android:maxLines="1"-->
+<!--        android:paddingTop="2dp"-->
+<!--        android:paddingLeft="15dp"-->
+<!--        android:background="@drawable/et_bg"-->
+<!--        android:textSize="22dp"-->
+<!--        android:hint="Enter Name:"-->
+<!--        android:textStyle="bold" />-->
 
 
 
 
-    <EditText
-        android:id="@+id/etemail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Enter Emailid:"
-        android:textSize="25dp"
-        android:textColorHint="@android:color/black"
-        android:layout_marginTop="135dp"
-        android:textStyle="bold" />
+<!--    <EditText-->
+<!--        android:id="@+id/etemail"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="Enter Email:"-->
+<!--        android:textSize="22dp"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:layout_marginLeft="20dp"-->
+<!--        android:layout_marginRight="20dp"-->
+<!--        android:maxLines="1"-->
+<!--        android:paddingTop="2dp"-->
+<!--        android:paddingLeft="15dp"-->
+<!--        android:background="@drawable/et_bg"-->
+<!--        android:layout_below="@id/etname"-->
+<!--        android:textStyle="bold" />-->
 
 
 
-        <EditText
-            android:id="@+id/etadhar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="194dp"
-            android:text="Enter Adhar card No:"
-            android:inputType="number"
-            android:textColorHint="@android:color/black"
-            android:textSize="25dp"
-            android:textStyle="bold" />
+<!--        <EditText-->
+<!--            android:id="@+id/etadhar"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@id/etemail"-->
+<!--            android:hint="Enter Adhar:"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginLeft="20dp"-->
+<!--            android:layout_marginRight="20dp"-->
+<!--            android:maxLines="1"-->
+<!--            android:paddingTop="2dp"-->
+<!--            android:paddingLeft="15dp"-->
+<!--            android:background="@drawable/et_bg"-->
+<!--            android:textSize="22sp"-->
+<!--            android:textStyle="bold" />-->
 
 
 
-        <EditText
-            android:id="@+id/etPhone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="257dp"
-            android:inputType="number"
-            android:text="Enter Phone No:"
-            android:textColorHint="@android:color/black"
-            android:textSize="25dp"
-            android:textStyle="bold" />
+<!--        <EditText-->
+<!--            android:id="@+id/etPhone"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:inputType="number"-->
+<!--            android:layout_below="@id/etadhar"-->
+<!--            android:hint="Enter Phone no:"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginLeft="20dp"-->
+<!--            android:layout_marginRight="20dp"-->
+<!--            android:maxLines="1"-->
+<!--            android:paddingTop="2dp"-->
+<!--            android:paddingLeft="15dp"-->
+<!--            android:background="@drawable/et_bg"-->
+<!--            android:textSize="22sp"-->
+<!--            android:textStyle="bold" />-->
+
 
 
 
@@ -77,43 +104,56 @@
         <EditText
             android:id="@+id/etissue"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="310dp"
-            android:text="Mention Issue:"
-            android:textColorHint="@android:color/black"
-            android:textSize="25dp"
+            android:layout_height="180dp"
+            android:layout_below="@id/register"
+            android:hint="Description:"
+            android:paddingBottom="100dp"
+            android:maxLines="5"
+            android:paddingRight="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:paddingTop="2dp"
+            android:paddingLeft="15dp"
+            android:background="@drawable/et_bg"
+            android:textSize="22sp"
             android:textStyle="bold" />
 
 
     <Button
         android:id="@+id/btfinish"
-        android:layout_width="220dp"
-        android:layout_height="70dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:onClick="btfinish"
         android:enabled="false"
-        android:layout_marginLeft="80dp"
-        android:layout_marginTop="480dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="40dp"
         android:background="@drawable/btn_bg"
-        android:backgroundTint="#ffc0cb"
+        android:backgroundTint="#ff7007"
         android:gravity="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textAllCaps="false"
         android:text="Register Complaint"
-        android:textColor="@android:color/holo_red_light" />
+        android:textColor="@color/white" />
 
-    <Button
-        android:id="@+id/Khatam"
-        android:layout_width="220dp"
-        android:layout_height="70dp"
-        android:layout_gravity="center"
-        android:layout_marginLeft="80dp"
-        android:layout_marginTop="590dp"
-        android:background="@drawable/btn_bg"
-        android:backgroundTint="#ffc0cb"
-        android:gravity="center"
-        android:enabled="false"
-        android:text="Finish"
-        android:onClick="Khatam"
-        android:textColor="@android:color/holo_red_light"/>
+<!--    <Button-->
+<!--        android:id="@+id/Khatam"-->
+<!--        android:layout_width="220dp"-->
+<!--        android:layout_height="70dp"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:layout_marginLeft="80dp"-->
+<!--        android:layout_marginTop="590dp"-->
+<!--        android:background="@drawable/btn_bg"-->
+<!--        android:backgroundTint="#ffc0cb"-->
+<!--        android:gravity="center"-->
+<!--        android:enabled="false"-->
+<!--        android:text="Finish"-->
+<!--        android:onClick="Khatam"-->
+<!--        android:textColor="@android:color/holo_red_light"/>-->
 
 
 

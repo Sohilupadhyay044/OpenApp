@@ -25,7 +25,7 @@ public class complaint_activity extends AppCompatActivity {
     private EditText ename, eemail, ePhone, eadhar, eissue;
     private Button btfinish;
 
-    Button button00;
+//    Button button00;
 
     private FirebaseDatabase database;
     private DatabaseReference reference;
@@ -38,124 +38,124 @@ public class complaint_activity extends AppCompatActivity {
         database = FirebaseDatabase.getInstance();
         reference = database.getReference("ComplaintData");
 
-        ename = findViewById(R.id.etname);
-        eemail = findViewById(R.id.etemail);
-        ePhone = findViewById(R.id.etPhone);
-        eadhar = findViewById(R.id.etadhar);
+//        ename = findViewById(R.id.etname);
+//        eemail = findViewById(R.id.etemail);
+//        ePhone = findViewById(R.id.etPhone);
+//        eadhar = findViewById(R.id.etadhar);
         eissue = findViewById(R.id.etissue);
 
-        button00 = findViewById(R.id.Khatam);
+//        button00 = findViewById(R.id.Khatam);
 
 
 
         final Button btfinish = (Button) findViewById(R.id.btfinish);
 
 
-        eemail.setEnabled(false);
-        ePhone.setEnabled(false);
-        eadhar.setEnabled(false);
+//        eemail.setEnabled(false);
+//        ePhone.setEnabled(false);
+//        eadhar.setEnabled(false);
         eissue.setEnabled(false);
         btfinish.setEnabled(false);
 
-        ename.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged( CharSequence charSequence, int i, int i1, int i2 ) {
-
-            }
-
-            @Override
-            public void onTextChanged( CharSequence charSequence, int i, int i1, int i2 ) {
-
-                if(charSequence.toString().equals("")) {
-                    eemail.setEnabled(false);
-
-                }
-                else {
-                    eemail.setEnabled(true);
-                }
-
-            }
-
-            @Override
-            public void afterTextChanged( Editable editable ) {
-
-            }
-        });
-
-        eemail.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged( CharSequence charSequence, int i, int i1, int i2 ) {
-
-            }
-
-            @Override
-            public void onTextChanged( CharSequence charSequence, int i, int i1, int i2 ) {
-
-                if(charSequence.toString().equals("")) {
-                    eadhar.setEnabled(false);
-
-                }
-                else {
-                    eadhar.setEnabled(true);
-                }
-
-            }
-
-            @Override
-            public void afterTextChanged( Editable editable ) {
-
-            }
-        });
-
-        eadhar.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged( CharSequence charSequence, int i, int i1, int i2 ) {
-
-            }
-
-            @Override
-            public void onTextChanged( CharSequence charSequence, int i, int i1, int i2 ) {
-
-                if(charSequence.toString().equals("")) {
-                    ePhone.setEnabled(false);
-
-                }
-                else {
-                    ePhone.setEnabled(true);
-                }
-
-            }
-
-            @Override
-            public void afterTextChanged( Editable editable ) {
-
-            }
-        });
-
-        ePhone.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged( CharSequence charSequence, int i, int i1, int i2 ) {
-
-            }
-
-            @Override
-            public void onTextChanged( CharSequence charSequence, int i, int i1, int i2 ) {
-
-                if(charSequence.toString().equals("")) {
-                    eissue.setEnabled(false);
-
-                }
-                else {
-                    eissue.setEnabled(true);
-                }
-
-            }
-
-            @Override
-            public void afterTextChanged( Editable editable ) {
-
-            }
-        });
+////        ename.addTextChangedListener(new TextWatcher() {
+////            @Override
+////            public void beforeTextChanged( CharSequence charSequence, int i, int i1, int i2 ) {
+////
+////            }
+////
+////            @Override
+////            public void onTextChanged( CharSequence charSequence, int i, int i1, int i2 ) {
+////
+////                if(charSequence.toString().equals("")) {
+////                    eemail.setEnabled(false);
+////
+////                }
+////                else {
+////                    eemail.setEnabled(true);
+////                }
+////
+////            }
+//
+////            @Override
+////            public void afterTextChanged( Editable editable ) {
+////
+////            }
+////        });
+//
+//        eemail.addTextChangedListener(new TextWatcher() {
+//            @Override
+//            public void beforeTextChanged( CharSequence charSequence, int i, int i1, int i2 ) {
+//
+//            }
+//
+//            @Override
+//            public void onTextChanged( CharSequence charSequence, int i, int i1, int i2 ) {
+//
+//                if(charSequence.toString().equals("")) {
+//                    eadhar.setEnabled(false);
+//
+//                }
+//                else {
+//                    eadhar.setEnabled(true);
+//                }
+//
+//            }
+//
+//            @Override
+//            public void afterTextChanged( Editable editable ) {
+//
+//            }
+//        });
+//
+//        eadhar.addTextChangedListener(new TextWatcher() {
+//            @Override
+//            public void beforeTextChanged( CharSequence charSequence, int i, int i1, int i2 ) {
+//
+//            }
+//
+//            @Override
+//            public void onTextChanged( CharSequence charSequence, int i, int i1, int i2 ) {
+//
+//                if(charSequence.toString().equals("")) {
+//                    ePhone.setEnabled(false);
+//
+//                }
+//                else {
+//                    ePhone.setEnabled(true);
+//                }
+//
+//            }
+//
+//            @Override
+//            public void afterTextChanged( Editable editable ) {
+//
+//            }
+//        });
+//
+//        ePhone.addTextChangedListener(new TextWatcher() {
+//            @Override
+//            public void beforeTextChanged( CharSequence charSequence, int i, int i1, int i2 ) {
+//
+//            }
+//
+//            @Override
+//            public void onTextChanged( CharSequence charSequence, int i, int i1, int i2 ) {
+//
+//                if(charSequence.toString().equals("")) {
+//                    eissue.setEnabled(false);
+//
+//                }
+//                else {
+//                    eissue.setEnabled(true);
+//                }
+//
+//            }
+//
+//            @Override
+//            public void afterTextChanged( Editable editable ) {
+//
+//            }
+//        });
 
         eissue.addTextChangedListener(new TextWatcher() {
             @Override
@@ -186,7 +186,7 @@ public class complaint_activity extends AppCompatActivity {
 
     public void btfinish( View view ) {
 
-        button00.setEnabled(true);
+//        button00.setEnabled(true);
 
                         String name = ename.getText().toString();
                         String email = eemail.getText().toString();
@@ -212,9 +212,9 @@ public class complaint_activity extends AppCompatActivity {
                     }
 
 
-    public void Khatam( View view ) {
-
-        Toast.makeText(this, "Thank You.We Will Contact You Soon", Toast.LENGTH_LONG).show();
-
-    }
+//    public void Khatam( View view ) {
+//
+//        Toast.makeText(this, "Thank You.We Will Contact You Soon", Toast.LENGTH_LONG).show();
+//
+//    }
 }

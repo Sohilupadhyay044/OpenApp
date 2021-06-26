@@ -11,6 +11,7 @@
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+
             android:layout_centerInParent="true"
             android:layout_marginRight="40dp"
             android:layout_marginLeft="40dp">
@@ -19,6 +20,7 @@
                 android:id="@+id/imgView_logo"
                 android:layout_width="250dp"
                 android:layout_height="250dp"
+                android:layout_centerHorizontal="true"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
                 android:src="@drawable/pothole" />
@@ -55,8 +57,9 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Username"
+                                    android:text="User name"
                                     android:textAllCaps="true"
+                                    android:textStyle="bold"
                                     android:fontFamily="sans-serif-light"
                                     android:textColor="@color/black"
                                     android:textSize="15sp"/>
@@ -65,6 +68,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="40dp"
                                     android:textSize="15sp"
+                                    android:maxLines="1"
                                     android:hint="example@gmail.com"
                                     android:layout_marginTop="5dp"
                                     android:textColor="@color/black"
@@ -85,6 +89,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Password"
+                                    android:textStyle="bold"
                                     android:textAllCaps="true"
                                     android:fontFamily="sans-serif-light"
                                     android:textColor="@color/black"
@@ -94,6 +99,10 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="40dp"
                                     android:textSize="15sp"
+                                    android:maxLines="1"
+                                    android:ems="10"
+
+                                    android:inputType="textPassword"
                                     android:layout_marginTop="5dp"
                                     android:textColor="@color/black"
                                     android:hint="********"
@@ -129,18 +138,19 @@
                 android:layout_width="match_parent"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:visibility="gone"
+               android:visibility="gone"
                 android:layout_alignParentBottom="true"
                 android:layout_height="wrap_content">
 
                 <TextView
                     android:id="@+id/textView"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/transparent"
                     android:fontFamily="sans-serif"
-                    android:text="Already Logged in? Sign In Here"
-                    android:textAllCaps="true"
+                    android:textAlignment="center"
+                    android:text="Already Logged in? Sign In Here."
+                    android:textStyle="bold"
                     android:layout_marginBottom="15dp"
                     android:textColor="@color/black" />
 
