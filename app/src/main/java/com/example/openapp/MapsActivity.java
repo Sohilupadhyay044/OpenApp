@@ -6,6 +6,9 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.drawable.Drawable;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
@@ -15,6 +18,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentActivity;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -25,6 +29,9 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptor;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -37,6 +44,8 @@ import com.karumi.dexter.listener.PermissionDeniedResponse;
 import com.karumi.dexter.listener.PermissionGrantedResponse;
 import com.karumi.dexter.listener.PermissionRequest;
 import com.karumi.dexter.listener.single.PermissionListener;
+
+import java.util.ArrayList;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback,
         GoogleApiClient.ConnectionCallbacks,
@@ -60,15 +69,33 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private FirebaseDatabase firebaseDatabase;
 
 
+    ArrayList<LatLng> arrayList = new ArrayList<>();
+
+    LatLng location = new LatLng(27.1570777,81.9775159);
+    LatLng location1 = new LatLng(27.1572083,81.9764481);
+    LatLng location2 = new LatLng(27.1587912,81.97914);
+    LatLng location3 = new LatLng(27.1593377,81.9780627);
+    LatLng location4 = new LatLng(27.158827,81.9795675);
+    LatLng location5 = new LatLng(27.1593377,81.9780627);
+    LatLng location6 = new LatLng(27.158827,81.9795675);
+    LatLng location7 = new LatLng(27.158827,81.9795675);
+
     @Override
     protected void onCreate( Bundle savedInstanceState ) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
-
-
-
        firebaseDatabase = FirebaseDatabase.getInstance();
    reference = firebaseDatabase.getReference("Current Location");
+
+
+   arrayList.add(location);
+   arrayList.add(location1);
+   arrayList.add(location2);
+   arrayList.add(location3);
+   arrayList.add(location4);
+   arrayList.add(location5);
+   arrayList.add(location6);
+   arrayList.add(location7);
 
 
 
@@ -175,10 +202,32 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         public void onMapReady (GoogleMap googleMap ){
             mMap = googleMap;
 
+            for(int i=0; i<arrayList.size(); i++){
+                mMap.addMarker(new MarkerOptions().position(arrayList.get(i)).title("Potholes Detected Be CareFul")
+                        .icon(bitmapDescriptorFromVector(getApplicationContext(),R.drawable.ic_baseline_flag_24)));
+                mMap.animateCamera(CameraUpdateFactory.zoomBy(16.0f));
+                mMap.animateCamera(CameraUpdateFactory.newLatLng(arrayList.get(i)));
+            }
+
+
+
           if(latLng!=null){
               mMap.addMarker(new MarkerOptions().position(latLng).title("Marker in Current Location"));
-              mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng,14F));
+              mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng,15F));
           }
+        }
+
+        private BitmapDescriptor bitmapDescriptorFromVector(Context context, int vectorResId){
+            Drawable vectorDrawable = ContextCompat.getDrawable(context,vectorResId);
+            vectorDrawable.setBounds(0,0,vectorDrawable.getIntrinsicWidth(),
+                    vectorDrawable.getIntrinsicHeight());
+
+            Bitmap bitmap = Bitmap.createBitmap(vectorDrawable.getIntrinsicWidth(),
+                    vectorDrawable.getIntrinsicHeight(),Bitmap.Config.ARGB_8888);
+
+            Canvas canvas = new Canvas(bitmap);
+            vectorDrawable.draw(canvas);
+            return BitmapDescriptorFactory.fromBitmap(bitmap);
         }
 
         @Override

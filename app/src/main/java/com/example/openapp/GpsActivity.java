@@ -32,6 +32,8 @@ public class GpsActivity extends AppCompatActivity implements View.OnClickListen
     LocationManager locationManager;
     String lattitude,longitude;
 
+
+
     private DatabaseReference reference;
     private FirebaseDatabase firebaseDatabase;
 
