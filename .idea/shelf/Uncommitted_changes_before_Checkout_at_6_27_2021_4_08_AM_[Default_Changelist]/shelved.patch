@@ -1,0 +1,37 @@
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    package=\"com.example.openapp\">\r\n    <!--\r\n         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use\r\n         Google Maps Android API v2, but you must specify either coarse or fine\r\n         location permissions for the \"MyLocation\" functionality.\r\n    -->\r\n    <uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\" />\r\n    <uses-permission android:name=\"android.permission.INTERNET\" />\r\n    <uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\" />\r\n\r\n    <application\r\n        android:allowBackup=\"true\"\r\n        android:icon=\"@mipmap/ic_launcher\"\r\n        android:label=\"@string/app_name\"\r\n        android:roundIcon=\"@mipmap/ic_launcher_round\"\r\n        android:supportsRtl=\"true\"\r\n        android:theme=\"@style/AppTheme\">\r\n        <activity android:name=\".SettingActivity\"></activity>\r\n        <activity android:name=\".CommunityActivity\" />\r\n        <!--\r\n             The API key for Google Maps-based APIs is defined as a string resource.\r\n             (See the file \"res/values/google_maps_api.xml\").\r\n             Note that the API key is linked to the encryption key used to sign the APK.\r\n             You need a different API key for each encryption key, including the release key that is used to\r\n             sign the APK for publishing.\r\n             You can define the keys for the debug and release targets in src/debug/ and src/release/.\r\n        -->\r\n        <meta-data\r\n            android:name=\"com.google.android.geo.API_KEY\"\r\n            android:value=\"@string/google_maps_key\" />\r\n\r\n        <activity android:name=\".complaint_activity\" />\r\n        <activity android:name=\".GpsActivity\" />\r\n        <activity android:name=\".camactivity\" />\r\n        <activity android:name=\".InstallActivity\" />\r\n        <activity\r\n            android:name=\".MapsActivity\"\r\n            android:label=\"@string/title_activity_maps\" />\r\n        <activity android:name=\".MainActivity\" />\r\n        <activity android:name=\".VideoActivity\" />\r\n        <activity android:name=\".HomeActivity\" />\r\n        <activity android:name=\".LoginActivity\" />\r\n        <activity android:name=\".Main2Activity\">\r\n            <intent-filter>\r\n                <action android:name=\"android.intent.action.MAIN\" />\r\n\r\n                <category android:name=\"android.intent.category.LAUNCHER\" />\r\n            </intent-filter>\r\n        </activity>\r\n    </application>\r\n\r\n</manifest>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/AndroidManifest.xml	(revision 9f71fb12d74283fc631af4d1f9fcf29b60724c7b)
++++ app/src/main/AndroidManifest.xml	(date 1624746958477)
+@@ -38,16 +38,18 @@
+         <activity
+             android:name=".MapsActivity"
+             android:label="@string/title_activity_maps" />
+-        <activity android:name=".MainActivity" />
+-        <activity android:name=".VideoActivity" />
+-        <activity android:name=".HomeActivity" />
+-        <activity android:name=".LoginActivity" />
+-        <activity android:name=".Main2Activity">
+-            <intent-filter>
+-                <action android:name="android.intent.action.MAIN" />
++        <activity android:name=".MainActivity" >
++        <intent-filter>
++            <action android:name="android.intent.action.MAIN" />
+ 
+-                <category android:name="android.intent.category.LAUNCHER" />
+-            </intent-filter>
++            <category android:name="android.intent.category.LAUNCHER" />
++        </intent-filter>
++        </activity>
++        <activity android:name=".VideoActivity" />
++        <activity android:name=".HomeActivity" />
++        <activity android:name=".LoginActivity" />
++        <activity android:name=".Main2Activity">
++
+         </activity>
+     </application>
+ 
