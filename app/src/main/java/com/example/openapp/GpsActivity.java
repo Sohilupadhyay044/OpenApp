@@ -32,7 +32,7 @@ public class GpsActivity extends AppCompatActivity{
 //    LocationManager locationManager;
 //    String lattitude,longitude;
 
-
+//abc
 
     private DatabaseReference reference;
     private FirebaseDatabase firebaseDatabase;
