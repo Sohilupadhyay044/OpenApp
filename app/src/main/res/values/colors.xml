@@ -8,5 +8,10 @@
     <color name="gradStart">#FFFFFF</color>
     <color name="gradStop">#FFFFFF</color>
     <color name="white">#ffff</color>
+    <color name="grey">#535257</color>
+    <color name="light_greyy">#98999b</color>
+    <color name="exo_white">#ffff</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorWhite">#ffffffff</color>
 
 </resources>

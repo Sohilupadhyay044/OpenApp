@@ -44,7 +44,7 @@ public class camactivity extends AppCompatActivity {
        imageView = (ImageView) findViewById(R.id.imageView2);
         button2 = (Button) findViewById(R.id.button3);
         button = (Button) findViewById(R.id.imageView9);
-      cnext = (Button) findViewById(R.id.cnext);
+        cnext = (Button) findViewById(R.id.cnext);
         mStorageRef = FirebaseStorage.getInstance().getReference();
         Picasso.get().load(url).into(imageView);
 

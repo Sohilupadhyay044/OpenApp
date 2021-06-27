@@ -17,7 +17,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SettingActivity"></activity>
+        <activity android:name=".camactivity"></activity>
+        <activity android:name=".SettingActivity" />
         <activity android:name=".CommunityActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -33,7 +34,7 @@
 
         <activity android:name=".complaint_activity" />
         <activity android:name=".GpsActivity" />
-        <activity android:name=".camactivity" />
+        <activity android:name=".Main2Activity" />
         <activity android:name=".InstallActivity" />
         <activity
             android:name=".MapsActivity"
@@ -42,7 +43,7 @@
         <activity android:name=".VideoActivity" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".Main2Activity">
+        <activity android:name=".Launcher">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
