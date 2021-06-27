@@ -7,66 +7,66 @@
     android:orientation="vertical"
     tools:context=".InstallActivity">
 
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="139dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="40dp"
-        android:src="@drawable/icon" />
+<!--    <ImageView-->
+<!--        android:layout_width="100dp"-->
+<!--        android:layout_height="139dp"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:layout_marginTop="40dp"-->
+<!--        android:src="@drawable/icon" />-->
 
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Ar Measure"
-        android:textSize="20dp"
-        android:textColor="@android:color/holo_red_dark"/>
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:gravity="center"-->
+<!--        android:text="Ar Measure"-->
+<!--        android:textSize="20dp"-->
+<!--        android:textColor="@android:color/holo_red_dark"/>-->
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:text="Install the App to take picture."
-        android:textSize="30dp"
-        android:layout_gravity="center"
-        android:layout_marginLeft="5dp"
-        android:textStyle="bold"/>
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="75dp"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:gravity="center"-->
+<!--        android:text="Install the App to take picture."-->
+<!--        android:textSize="30dp"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:layout_marginLeft="5dp"-->
+<!--        android:textStyle="bold"/>-->
 
-    <TextView
-        android:id="@+id/link"
-        android:layout_width="match_parent"
-        android:layout_height="156dp"
-        android:text="https://play.google.com/store/apps/details?id=com.peace.ArMeasure"
-        android:textColor="@android:color/holo_blue_light"
-        android:textSize="25dp"
-        android:onClick="link"
-        android:layout_gravity="center"
-        android:gravity="center"/>
+<!--    <TextView-->
+<!--        android:id="@+id/link"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="156dp"-->
+<!--        android:text="https://play.google.com/store/apps/details?id=com.peace.ArMeasure"-->
+<!--        android:textColor="@android:color/holo_blue_light"-->
+<!--        android:textSize="25dp"-->
+<!--        android:onClick="link"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:gravity="center"/>-->
 
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="245dp"
-        android:layout_height="64dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="35dp"
-        android:background="@drawable/btn_bg"
-        android:backgroundTint="#ffc0cb"
-        android:onClick="GoAhead"
-        android:text="Next"
-        android:textColor="@android:color/holo_red_light" />
+<!--    <Button-->
+<!--        android:id="@+id/button3"-->
+<!--        android:layout_width="245dp"-->
+<!--        android:layout_height="64dp"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:layout_marginTop="35dp"-->
+<!--        android:background="@drawable/btn_bg"-->
+<!--        android:backgroundTint="#ffc0cb"-->
+<!--        android:onClick="GoAhead"-->
+<!--        android:text="Next"-->
+<!--        android:textColor="@android:color/holo_red_light" />-->
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="161dp"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:layout_marginLeft="15dp"
-        android:text="NOTE: Installation of this app is Mandatory."
-        android:textColor="@android:color/holo_red_light"
-        android:textSize="20dp"
-        android:textStyle="bold" />
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="161dp"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:gravity="center"-->
+<!--        android:layout_marginLeft="15dp"-->
+<!--        android:text="NOTE: Installation of this app is Mandatory."-->
+<!--        android:textColor="@android:color/holo_red_light"-->
+<!--        android:textSize="20dp"-->
+<!--        android:textStyle="bold" />-->
 
 </LinearLayout>

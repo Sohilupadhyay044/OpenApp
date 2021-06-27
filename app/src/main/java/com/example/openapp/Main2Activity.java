@@ -2,6 +2,7 @@ package com.example.openapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.LauncherActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -15,7 +16,7 @@ public class Main2Activity extends AppCompatActivity {
     }
 
     public void Lets( View view ) {
-        Intent intent = new Intent(getApplicationContext(),GpsActivity.class);
+        Intent intent = new Intent(getApplicationContext(), Launcher.class);
         startActivity(intent);
         finish();
     }

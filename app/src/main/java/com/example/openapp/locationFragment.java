@@ -12,8 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import org.jetbrains.annotations.NotNull;
-
+import com.google.firebase.database.annotations.NotNull;
 
 public class locationFragment extends Fragment {
 
@@ -33,28 +32,27 @@ public class locationFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_location, container, false);
     }
 
-
     @Override
-    public void onViewCreated(@NonNull @NotNull View view, @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
         imageView3 =view.findViewById(R.id.imageView3);
 
     }
 
+
     @Override
-    public void onActivityCreated(@Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
+        imageView3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-        imageView3.setOnClickListener(v -> {
+                startActivity(new Intent(getContext(), MapsActivity.class));
 
-
-            startActivity(new Intent(getContext(), MapsActivity.class));
+            }
         });
-
-
-
 
     }
 

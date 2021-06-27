@@ -43,6 +43,25 @@ dependencies {
     implementation 'androidx.navigation:navigation-ui:2.2.2'
 
 
+
+    //Ye Meri Dependency add ki hui hai
+    implementation 'com.github.siyamed:android-shape-imageview:0.9.3+@aar'
+    implementation 'com.github.armcha:AutoLinkTextView:0.3.0'
+    implementation 'info.hoang8f:fbutton:1.0.5'
+
+    //dexter permissions
+    implementation "com.karumi:dexter:5.0.0"
+
+    //Glide
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    implementation 'com.github.bumptech.glide:annotations:4.9.0'
+    implementation('com.github.bumptech.glide:okhttp3-integration:4.0.0') {
+        exclude group: 'glide-parent'
+    }
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+
+
+
     //Lottie
     implementation 'com.airbnb.android:lottie:3.7.0'
 }

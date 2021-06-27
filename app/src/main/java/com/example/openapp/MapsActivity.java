@@ -204,7 +204,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
             for(int i=0; i<arrayList.size(); i++){
                 mMap.addMarker(new MarkerOptions().position(arrayList.get(i)).title("Potholes Detected Be CareFul")
-                        .icon(bitmapDescriptorFromVector(getApplicationContext(),R.drawable.ic_baseline_flag_24)));
+                        .icon(bitmapDescriptorFromVector(getApplicationContext(),R.drawable.ic__39226)));
                 mMap.animateCamera(CameraUpdateFactory.zoomBy(16.0f));
                 mMap.animateCamera(CameraUpdateFactory.newLatLng(arrayList.get(i)));
             }
