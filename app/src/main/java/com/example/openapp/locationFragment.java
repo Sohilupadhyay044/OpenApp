@@ -12,13 +12,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.airbnb.lottie.LottieAnimationView;
+
 import org.jetbrains.annotations.NotNull;
 
 
 public class locationFragment extends Fragment {
 
 
-    ImageView imageView3;
+    LottieAnimationView imageView3;
+
 
 
 
@@ -47,12 +50,15 @@ public class locationFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
 
 
-        imageView3.setOnClickListener(v -> {
 
 
-            startActivity(new Intent(getContext(), MapsActivity.class));
+        imageView3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                startActivity(new Intent(getContext(), MapsActivity.class));
+            }
         });
-
 
 
 
