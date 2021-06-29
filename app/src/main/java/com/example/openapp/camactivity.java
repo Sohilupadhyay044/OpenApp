@@ -41,7 +41,7 @@ public class camactivity extends AppCompatActivity {
     protected void onCreate( Bundle savedInstanceState ) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_camactivity);
-       imageView = (ImageView) findViewById(R.id.imageView2);
+     //  imageView = (ImageView) findViewById(R.id.imageView2);
         button2 = (Button) findViewById(R.id.button3);
         button = (Button) findViewById(R.id.imageView9);
         cnext = (Button) findViewById(R.id.cnext);

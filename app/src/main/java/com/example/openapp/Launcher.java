@@ -5,17 +5,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.example.openapp.UtilityPackage.ChatFragment;
+import com.example.openapp.UtilityPackage.communityFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Launcher extends AppCompatActivity {
-
-
     private BottomNavigationView bottomNavigationView;
     private FragmentManager fragmentManager;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +34,7 @@ public class Launcher extends AppCompatActivity {
 
     private BottomNavigationView.OnNavigationItemSelectedListener navigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
+        @SuppressLint("ResourceType")
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             Fragment selectedFragment = null;
@@ -46,13 +47,12 @@ public class Launcher extends AppCompatActivity {
                 case R.id.cameraFrag:
                     selectedFragment = new cameraFragment();
                     break;
-                case R.id.communityFrag:
-                    selectedFragment = new communityFragment();
+                case R.id.chatFrag:
+                    selectedFragment = new ChatFragment();
                     break;
                 case R.id.accountFrag:
                     selectedFragment = new accountFragment();
                     break;
-
 
             }
             getSupportFragmentManager().beginTransaction().replace(R.id.flFragment, selectedFragment).addToBackStack("hello").commit();

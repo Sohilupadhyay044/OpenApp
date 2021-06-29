@@ -1,24 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
-
-
-
     <item android:id="@+id/locationFrag"
         android:title="Maps"
-        android:icon="@drawable/ic_location"/>
+        android:icon="@drawable/child1"/>
 
     <item android:id="@+id/cameraFrag"
         android:title="Camera"
-        android:icon="@drawable/ic_cam_normal"/>
+        android:icon="@drawable/child2"/>
 
-    <item android:id="@+id/communityFrag"
-        android:title="Community"
-        android:icon="@drawable/ic_chat_normal"/>
+    <item android:id="@+id/chatFrag"
+        android:title="Chat"
+        android:icon="@drawable/child3"/>
 
     <item android:id="@+id/accountFrag"
         android:title="Account"
-        android:icon="@drawable/ic_user_normal"/>
+        android:icon="@drawable/child4"/>
 
 
 

@@ -1,32 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffff"
+    android:background="@color/white"
+
     android:orientation="vertical"
     android:weightSum="8"
     tools:context=".locationFragment">
 
 
-    <ImageView
+    <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/imageView3"
-        android:layout_width="252dp"
-        android:layout_height="183dp"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
         android:layout_gravity="center"
-        android:layout_marginStart="29dp"
-        android:layout_marginLeft="29dp"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="29dp"
-        android:layout_marginRight="29dp"
-        android:layout_marginBottom="33dp"
-        android:layout_weight="2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_location_oranges"
-        tools:ignore="VectorDrawableCompat" />
+        android:layout_centerInParent="true"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/luck"/>
 
 
     <!--    <TextView-->
@@ -78,4 +71,4 @@
     <!--        android:text="Next" />-->
 
 
-</LinearLayout>
+</RelativeLayout>

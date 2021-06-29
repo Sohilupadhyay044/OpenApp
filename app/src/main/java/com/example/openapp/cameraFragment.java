@@ -18,6 +18,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.storage.FirebaseStorage;
@@ -36,6 +37,10 @@ public class cameraFragment extends Fragment {
     public static final int CAMERA_LAUNCHER = 9999;
     ImageView imageView;
     Button button2,button,cnext;
+    LottieAnimationView imgClick;
+
+
+
     private StorageReference mStorageRef;
     String url ="https://firebasestorage.googleapis.com/v0/b/firestoreconn.appspot.com/o/american.jpg?alt=media&token=bd742293-3267-4584-a89e-a9dc74d1868b";
     Uri uri;
@@ -61,12 +66,65 @@ public class cameraFragment extends Fragment {
     public void onViewCreated(@NonNull @NotNull View view, @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        imageView = (ImageView) view.findViewById(R.id.imageView2);
+        imgClick =(LottieAnimationView) view.findViewById(R.id.lottie);
+        imageView = (ImageView) view.findViewById(R.id.imageView);
         button2 = (Button) view.findViewById(R.id.button3);
         button = (Button) view.findViewById(R.id.imageView9);
         cnext = (Button) view.findViewById(R.id.cnext);
         mStorageRef = FirebaseStorage.getInstance().getReference();
         Picasso.get().load(url).into(imageView);
+
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                button2.setVisibility(View.VISIBLE);
+                StorageReference riversRef = mStorageRef.child("images/"+uri.getLastPathSegment());
+                riversRef.putFile(uri)
+                        .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                            @Override
+                            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                                // Get a URL to the uploaded content
+                                Uri downloadUrl = taskSnapshot.getUploadSessionUri();
+                                Log.d("abhi",""+downloadUrl);
+                                Toast.makeText(getContext(), "Data Save SuccessFully", Toast.LENGTH_SHORT).show();
+                            }
+                        })
+                        .addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception exception) {
+                                // Handle unsuccessful uploads
+                                // ...
+                                Toast.makeText(getContext(), "Koi Problem Hai", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+            }
+        });
+
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                button2.setEnabled(true);
+
+                Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+                intent.setType("image/");
+                startActivityForResult(intent, 101);
+            }
+        });
+
+imgClick.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+
+        imgClick.setVisibility(View.INVISIBLE);
+        button.setEnabled(true);
+        Intent OpenApp = getActivity().getPackageManager().getLaunchIntentForPackage("com.peace.ArMeasure");
+        startActivity(OpenApp);
+
+
+    }
+});
 
 
     }
@@ -79,11 +137,11 @@ public class cameraFragment extends Fragment {
     }
 
 
-    public void OpenApp( View view ) {
-        button.setEnabled(true);
-        Intent OpenApp = getActivity().getPackageManager().getLaunchIntentForPackage("com.peace.ArMeasure");
-        startActivity(OpenApp);
-    }
+
+
+//    public void OpenApp( View view ) {
+//
+//    }
 
     public void OpenCamera( View view ) {
 
@@ -94,14 +152,9 @@ public class cameraFragment extends Fragment {
 
     }
 
-
     public void Gallery( View view ) {
 
-        button2.setEnabled(true);
 
-        Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
-        intent.setType("image/");
-        startActivityForResult(intent, 101);
     }
 
     @Override
@@ -123,27 +176,7 @@ public class cameraFragment extends Fragment {
     }
 
     public void uploadImage(View view) {
-        button2.setVisibility(View.VISIBLE);
-        cnext.setVisibility(View.VISIBLE);
-        StorageReference riversRef = mStorageRef.child("images/"+uri.getLastPathSegment());
-        riversRef.putFile(uri)
-                .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                    @Override
-                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                        // Get a URL to the uploaded content
-                        Uri downloadUrl = taskSnapshot.getUploadSessionUri();
-                        Log.d("abhi",""+downloadUrl);
-                        Toast.makeText(getContext(), "Data Save SuccessFully", Toast.LENGTH_SHORT).show();
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception exception) {
-                        // Handle unsuccessful uploads
-                        // ...
-                        Toast.makeText(getContext(), "Koi Problem Hai", Toast.LENGTH_SHORT).show();
-                    }
-                });
+
     }
 
     public void cnext(View view) {}

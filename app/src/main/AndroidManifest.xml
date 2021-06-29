@@ -9,6 +9,9 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
 
     <application
         android:allowBackup="true"
@@ -17,9 +20,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <service
+            android:name=".MyLocationApp"
+            android:enabled="true"
+            android:exported="true"></service>
+
         <activity android:name=".camactivity" />
         <activity android:name=".SettingActivity" />
-        <activity android:name=".CommunityActivity" />
+        <activity android:name=".CommunityActivity" >
+
+        </activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -33,7 +43,7 @@
             android:value="@string/google_maps_key" />
 
         <activity android:name=".complaint_activity" />
-        <activity android:name=".GpsActivity" />
+        <activity android:name=".GpsActivity"></activity>
         <activity android:name=".Main2Activity" />
         <activity android:name=".InstallActivity" />
         <activity
@@ -42,14 +52,14 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
         <activity android:name=".VideoActivity" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".Launcher"></activity>
+        <activity android:name=".Launcher" />
     </application>
 
 </manifest>
